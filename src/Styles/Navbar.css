@@ -1,0 +1,30 @@
+.navbar{
+    background-color: green;
+    height: 4.5rem;
+    display: flex;
+}
+
+.logo{
+    align-self: flex-start;
+    font-size: 30px;
+    padding: 1rem;
+    padding-top: 10px;
+    color: white;
+}
+
+.nav_items{
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_item{
+    color: white;
+    padding: 1.35rem .7rem;
+}
+
+.cart_container{
+    align-self: flex-end;
+    padding-right: 1rem;
+    padding-top: 1.3rem;
+}

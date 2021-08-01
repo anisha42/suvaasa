@@ -1,0 +1,74 @@
+.login {
+    background-color: gainsboro;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__container {
+    /*margin: auto;*/
+    /*margin-top: 40px;*/
+    color: white;
+    background-color: black;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    /*border-radius: 20px;*/
+    /*border: 1px solid lightgray;*/
+    padding: 20px;
+    align-items: center;
+}
+
+.login__container > h1 {
+    font-family: Morganite, Arial;
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.login__container > form{
+    text-align: center;
+    width: 100%;
+}
+
+.login__container > form > h5 {
+    margin-bottom: 5px;
+}
+
+.login__container > form > div > input {
+    color: grey;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: #282c34;
+    width: 45%;
+    border: unset;
+}
+
+.login__signInButton {
+    background: bisque;
+    border-radius: 2px;
+    width: 53%;
+    height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.google__icon{
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.login__container > h5{
+    font-family: Morganite, Arial;
+    color: grey;
+    margin-top: 55px;
+    margin-bottom: 0px;
+}
+.login__registerButton{
+    background-color: black;
+    border: unset;
+    color: bisque;
+    cursor: pointer;
+}
