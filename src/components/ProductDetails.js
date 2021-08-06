@@ -22,55 +22,61 @@ function ProductDetails({user, setProduct}){
 
     return(
         <div className='productList'>
-            <div className='title_container'><p style={{marginTop: "5%"}}><small>$</small>{item.price}</p></div>
+            <div className='title_container'></div>
             <div className='product__card'>
-                <Box width="80%" background="white"
-                     style={{borderRadius:" 10px 10px",
-                         boxShadow: "-5px -7px 28px 0px rgba(0,0,0,0.39)"}}
+                <Box width="80%"
+                     style={{borderRadius:" 10px 10px", backgroundColor:"white",
+                         boxShadow: "-5px -7px 28px 0px rgba(0,0,0,0.39)", display: "flex",
+                         flexDirection: "row", justifyContent:"space-around", paddingTop:"5%"}}
                 >
-                    <Box className="product__details"
-                         style={{display: "flex",
-                             flexDirection: "row"}}
-                    >
-                        <Box className="image__container" style={{width:"600px"}}>
+                    {/*<Box className="product__details"*/}
+                    {/*     style={{display: "flex",*/}
+                    {/*         flexDirection: "row", backgroundColor:"pink", justifyContent:"space-around", margin:"0"}}*/}
+                    {/*>*/}
+                        <Box className="image__container" style={{width:"450px"}}>
                             <Box style={{
-                                height:"600px",
+                                height:"500px",
                                 borderRadius:" 10px 10px",
-                                boxShadow: "-5px -7px 28px 0px gray"}}>
-                                <img src={item.img}/>
+                                boxShadow: "-5px -7px 28px 0px gray",
+                                }}>
+                                <img src={item.img} style={{width:"90%", alignSelf:"center", height:"85%", paddingTop:"5%"}}/>
                                 {/*<img src={pic}/>*/}
                             </Box>
-                            <br/>
+
                             <p style={{textAlign: "center",
-                                fontSize: "40px",
+                                fontSize: "32px",
                                 fontWeight: "bold",
                                 marginBottom: "3px",
                                 color: "black"}}
                             >
                                 GARDENING
                             </p>
-                            <p style={{textAlign: "center",
-                                fontSize: "20px",
+                            <div style={{textAlign: "center",
+                                fontSize: "17px",
                                 color: "grey"
                             }}>
                                 The name peperomia might not roll off your tongue, but you could get lost in this wonderful genus of tropical plants.
-                            </p>
+                            </div>
+                            <br/><br/>
                         </Box>
                         <Box className="details__container"
                              style={{fontFamily: "Morganite",
                                  fontWeight: "bold"}}>
-                            <Box style={{fontSize: "90px",
-                                margin: "40px"}}
-                            >{item.name}</Box>
+                            <Box style={{fontSize: "50px",
+                                marginTop: "16%"}}
+                            >{item.name}</Box><br/>
+                            <Box style={{fontSize: "30px",
+                                marginBottom: "25px"}}
+                            >${item.price}</Box>
                             <h3 style={{fontSize: "25px",
-                                marginTop: "0px"}}
+                                marginTop: "0px", color:"green"}}
                             >In Stock
-                                <br/><br/><br/>
-                                Quantity
+                                <br/><br/>
+                                <span style={{color:"black"}}>Quantity</span>
                             </h3>
                             <div className="button__container">
                                 <button className="button" onClick={()=> quantity>1?setQuantity(quantity-1):setQuantity(quantity)}>-</button>
-                                <button className="quantity">{quantity}</button>
+                                <button className="quantity"><small>{quantity}</small></button>
                                 <button className="button" onClick={()=> setQuantity(quantity+1)}>+</button>
                             </div>
                             <div className="action__container">
@@ -80,7 +86,7 @@ function ProductDetails({user, setProduct}){
                                     color: "white"}} onClick={handleQuickBuy}>QUICK BUY</button>
                             </div>
                         </Box>
-                    </Box>
+                    {/*</Box>*/}
                 </Box>
             </div>
         </div>
