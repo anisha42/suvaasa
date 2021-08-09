@@ -8,6 +8,7 @@ import Explore from './components/Explore'
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ProductDetails from "./components/ProductDetails";
+import Cart from "./components/Cart";
 
 function App({user, setUser}) {
 
@@ -54,7 +55,7 @@ function App({user, setUser}) {
             <Signup/>
           </Route>
           <Route path="/cart">
-            {/*<Cart/>*/}
+            <Cart/>
             {/*<FooterBar/>*/}
           </Route>
           <Route path="/checkout">
